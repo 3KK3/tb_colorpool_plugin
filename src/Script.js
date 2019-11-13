@@ -546,66 +546,66 @@ function openSetColorPanel(context, layer) {
     var buttons = [];
 
     // 创建视图
-    var view = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, 400, 150)];
+    var view = NSView.alloc().initWithFrame(NSMakeRect(0, 0, 400, 150));
 
     // Label
-    var label = [[NSText alloc] initWithFrame:NSMakeRect(0, 0, 400, 30)];
+    var label = NSText.alloc().initWithFrame(NSMakeRect(0, 0, 400, 30));
     label.backgroundColor = NSColor.clearColor();
     label.textAligment = NSTextAlignmentRight;
-    label.string = [NSString stringWithFormat:@"当前图层的颜色：%@",customColorName];
-    [view addSubview:label];
+    label.string = NSString.stringWithFormat("当前图层的颜色：%@",customColorName);
+    view.addSubview(label);
 
     var frame = NSMakeRect(0, 30, 150, 30);
     for (var pool in colorPools) {
-        var button = [[NSPopUpButton alloc] initWithFrame:frame];
-        [button addItemWithTitle:colorPoolNames[pool]];
+        var button = NSPopUpButton.alloc().initWithFrame(frame);
+        button.addButtonWithTitle(colorPoolNames[pool]);
 
         var colorArray = colorPools[pool];
         for (var index in colorArray) {
-            [button addItemWithTitle:colorArray[index]];
+            button.addButtonWithTitle(colorArray[index]);
         }
         
-        [view addSubview:button];
+        view.addSubview(button);
         buttons.push(button);
         frame.origin.y += frame.size.height;
 
-        [button setCOSJSTargetFunction:function(sender) {
+        button.setCOSJSTargetFunction(function(sender) {
             buttonAction(sender);
-        }];
+        });
     }
 
-    var restoreButton = [[NSButton alloc] initWithFrame:NSMakeRect(220, 30, 125, 30)];
+    var restoreButton = NSButton.alloc().initWithFrame(NSMakeRect(220, 30, 125, 30));
     restoreButton.bezelStyle = NSBezelStyleRounded;
-    [restoreButton setTitle:@"一键还原图层颜色"];
-    [restoreButton setCOSJSTargetFunction:function(sender) {
+    restoreButton.setTitle("一键还原图层颜色");
+    restoreButton.setCOSJSTargetFunction(function(sender) {
         for (const key in buttons) {
             if (buttons.hasOwnProperty(key)) {
                 const element = buttons[key];
-                [element selectItemAtIndex:0];
+                element.selectItemAtIndex(0);
             }
         }
         var value = getColor(currentLayer);
-        label.string = [NSString stringWithFormat:@"当前图层的颜色：%@",value];
+        label.string = NSString.stringWithFormat("当前图层的颜色：%@",value);
         command.setValue_forKey_onLayer(value, kLayerTBColorCustomKey, currentLayer);
         saveOrignalLayerName(currentLayer);
         currentLayer.name = value + " | " + getOrignalLayerName(currentLayer);
         doc.showMessage(value);
-    }];
-    [view addSubview:restoreButton];
+    });
+    view.addSubview(restoreButton);
 
     function buttonAction(button) {
         for (const key in buttons) {
             if (buttons.hasOwnProperty(key)) {
                 const element = buttons[key];
                 if (element != button) {
-                    [element selectItemAtIndex:0];
+                    element.selectItemAtIndex(0);
                 }
             }
         }
         if (button.indexOfSelectedItem() == 0) {
             return;
         }
-        label.string = [NSString stringWithFormat:@"当前图层的颜色：%@",button.titleOfSelectedItem()];
+        label.string = NSString.stringWithFormat("当前图层的颜色：%@",button.titleOfSelectedItem());
         var value = button.titleOfSelectedItem();
         command.setValue_forKey_onLayer(value, kLayerTBColorCustomKey, currentLayer);
         // 将当前的layer的名称替换成颜色名。
@@ -628,42 +628,42 @@ function openSetColorPanelWithLayers(context, selection) {
     var buttons = [];
 
     // 创建视图
-    var view = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, 400, 150)];
+    var view = NSView.alloc().initWithFrame(NSMakeRect(0, 0, 400, 150));
 
     // Label
-    var label = [[NSText alloc] initWithFrame:NSMakeRect(0, 0, 400, 30)];
+    var label = NSText.alloc().initWithFrame(NSMakeRect(0, 0, 400, 30));
     label.backgroundColor = NSColor.clearColor();
     label.textAligment = NSTextAlignmentRight;
-    label.string = [NSString stringWithFormat:@"当前为多选图层状态"];
-    [view addSubview:label];
+    label.string = NSString.stringWithFormat("当前为多选图层状态");
+    view.addSubview(label);
 
     var frame = NSMakeRect(0, 30, 150, 30);
     for (var pool in colorPools) {
-        var button = [[NSPopUpButton alloc] initWithFrame:frame];
-        [button addItemWithTitle:colorPoolNames[pool]];
+        var button = NSPopUpButton.alloc().initWithFrame(frame);
+        button.addButtonWithTitle(colorPoolNames[pool]);
 
         var colorArray = colorPools[pool];
         for (var index in colorArray) {
-            [button addItemWithTitle:colorArray[index]];
+            button.addButtonWithTitle(colorArray[index]);
         }
         
-        [view addSubview:button];
+        view.addSubview(button);
         buttons.push(button);
         frame.origin.y += frame.size.height;
 
-        [button setCOSJSTargetFunction:function(sender) {
+        button.setCOSJSTargetFunction(function(sender) {
             buttonAction(sender);
-        }];
+        });
     }
 
-    var restoreButton = [[NSButton alloc] initWithFrame:NSMakeRect(220, 30, 125, 30)];
+    var restoreButton = NSButton.alloc().initWithFrame(NSMakeRect(220, 30, 125, 30));
     restoreButton.bezelStyle = NSBezelStyleRounded;
-    [restoreButton setTitle:@"一键还原图层颜色"];
-    [restoreButton setCOSJSTargetFunction:function(sender) {
+    restoreButton.setTitle("一键还原图层颜色");
+    restoreButton.setCOSJSTargetFunction(function(sender) {
         for (const key in buttons) {
             if (buttons.hasOwnProperty(key)) {
                 const element = buttons[key];
-                [element selectItemAtIndex:0];
+                element.selectItemAtIndex(0);
             }
         }
 
@@ -676,23 +676,23 @@ function openSetColorPanelWithLayers(context, selection) {
                 layer.name = value + " | " + getOrignalLayerName(layer);
             }
         }
-        label.string = [NSString stringWithFormat:@"多选图层已还原本身颜色代号"];
-    }];
-    [view addSubview:restoreButton];
+        label.string = NSString.stringWithFormat("多选图层已还原本身颜色代号");
+    });
+    view.addSubview(restoreButton);
 
     function buttonAction(button) {
         for (const key in buttons) {
             if (buttons.hasOwnProperty(key)) {
                 const element = buttons[key];
                 if (element != button) {
-                    [element selectItemAtIndex:0];
+                    element.selectItemAtIndex(0);
                 }
             }
         }
         if (button.indexOfSelectedItem() == 0) {
             return;
         }
-        label.string = [NSString stringWithFormat:@"当前多选图层的颜色：%@",button.titleOfSelectedItem()];
+        label.string = NSString.stringWithFormat("当前多选图层的颜色：%@",button.titleOfSelectedItem());
         var value = button.titleOfSelectedItem();
         for (var i = 0; i < selection.count(); i++) {
             const layer = selection[i];
