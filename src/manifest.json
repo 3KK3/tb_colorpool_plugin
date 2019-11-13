@@ -49,8 +49,8 @@
     "title" : "tb-colorpool"
   },
   "identifier" : "com.tbcolorpool.sketch",
-  "version" : "2.0.2",
-  "description" : "增加UE自定义图层颜色功能",
+  "version" : "2.0.5",
+  "description" : "v2.0.5修复程序错误",
   "authorEmail" : "yanshby@icloud.com",
   "name" : "tb-colorpool"
 }
