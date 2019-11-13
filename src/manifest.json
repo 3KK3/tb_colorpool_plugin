@@ -3,15 +3,54 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "my-command",
-      "identifier": "tb-colorpool.my-command-identifier",
-      "script": "./my-command.js"
+      "script" : "Script.js",
+      "handler" : "setColorValueWithLayers",
+      "shortcut" : "shift cmd i",
+      "name" : "(UE)一键设置选中图层颜色",
+      "identifier" : "com.tbcolorpool.createcolorvalueforlayers"
+    },
+    {
+      "script" : "Script.js",
+      "handler" : "setColorValueWithCurrentLayer",
+      "shortcut" : "shift cmd m",
+      "name" : "(UE)手动设置选中图层颜色",
+      "identifier" : "com.tbcolorpool.createcolorvalueforselectedlayer"
+    },
+    {
+      "script" : "Script.js",
+      "handler" : "onRun",
+      "shortcut" : "shift cmd p",
+      "name" : "读取当前图层颜色",
+      "identifier" : "com.tbcolorpool.readcolorvalue"
+    },
+    {
+      "script" : "Script.js",
+      "handler" : "ungroupWithLayer",
+      "shortcut" : "shift cmd ;",
+      "name" : "一键解组图层",
+      "identifier" : "com.tbcolorpool.ungroup"
+    },
+    {
+      "script" : "Script.js",
+      "handler" : "restoreLayer",
+      "shortcut" : "shift cmd '",
+      "name" : "(UE)一键还原",
+      "identifier" : "com.tbcolorpool.restorelayer"
     }
   ],
   "menu": {
-    "title": "tb-colorpool",
-    "items": [
-      "tb-colorpool.my-command-identifier"
-    ]
-  }
+    "items" : [
+      "com.tbcolorpool.readcolorvalue",
+      "com.tbcolorpool.createcolorvalueforlayers",
+      "com.tbcolorpool.createcolorvalueforselectedlayer",
+      "com.tbcolorpool.ungroup",
+      "com.tbcolorpool.restorelayer"
+    ],
+    "title" : "tb-colorpool"
+  },
+  "identifier" : "com.tbcolorpool.sketch",
+  "version" : "2.0.0",
+  "description" : "增加UE自定义图层颜色功能",
+  "authorEmail" : "yanshby@icloud.com",
+  "name" : "tb-colorpool"
 }
