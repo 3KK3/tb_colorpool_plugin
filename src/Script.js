@@ -1,3 +1,5 @@
+import sketch from 'sketch'
+
 var BorderPositions = ["center", "inside", "outside"],
     FillTypes = ["color", "gradient"],
     GradientTypes = ["linear", "radial", "angular"],
@@ -105,7 +107,7 @@ function initContext(context) {
 }
 
 // 读取一个图层的色值
-var onRun = function (context) {
+export function onRun(context) {
     initContext(context);
     var customColorValue = readColorValue(context, currentLayer);
     if (customColorValue) {
@@ -113,10 +115,10 @@ var onRun = function (context) {
     } else {
         doc.showMessage("当前选中图层的颜色不在色库中" + getColor(currentLayer));
     }
-};
+}
 
 // 读取一个图层的色值
-function readColorValue (context, layer) {
+export function readColorValue(context, layer) {
     // 初始化上下文
     initContext(context);
     if (layer.isKindOfClass(MSLayer) == false || layer.isKindOfClass(MSLayerGroup)) {
@@ -154,8 +156,7 @@ var setColorValueAllLayers = function (context) {
     }
     doc.showMessage("设置成功");
 }
-
-var setColorValueWithLayers = function (context) {
+export function setColorValueWithLayers(context) {
     // 初始化上下文
     initContext(context);
     setEachLayerName(currentLayer);
@@ -188,7 +189,7 @@ var setColorValueWithSectionLayers = function (context, selection) {
     openSetColorPanelWithLayers(context, selection);
 }
 
-var setColorValueWithCurrentLayer = function (context) {
+export function setColorValueWithCurrentLayer(context) {
     initContext(context);
     if (!currentLayer) {
         doc.showMessage("当前没有选中任何图层！！");
@@ -208,7 +209,7 @@ var setSelectedLayerColorValue = function (context) {
     initContext(context);
 }
 
-var restoreLayer = function (context) {
+export function restoreLayer(context) {
     // 初始化上下文
     initContext(context);
     restorSelectionLayerName(selection);
@@ -252,7 +253,7 @@ var ungroupAllLayer = function (context) {
     doc.showMessage("解组完成！");
 }
 
-function ungroupWithLayer (context) {
+export function ungroupWithLayer(context) {
     initContext(context);
     if (currentLayer.isKindOfClass(MSSymbolInstance)) {
         currentLayer.symbolMaster().ungroup();
