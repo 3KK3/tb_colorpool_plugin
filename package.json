@@ -23,5 +23,9 @@
   "devDependencies": {
     "@skpm/builder": "^0.7.0"
   },
+  "repository" : {
+    "type": "git",
+    "url": "git+https://github.com/YanShby/tb_colorpool_plugin"
+  },
   "author": "Shen,Yan <yanshby@icloud.com>"
 }
