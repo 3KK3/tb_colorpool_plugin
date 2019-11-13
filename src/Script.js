@@ -84,7 +84,8 @@ var app = NSApplication.sharedApplication(),
     command,
     page,            // the current page in the current document
     artboards,       // artboards and slices on the current page
-    selectedArtboard;
+    selectedArtboard,
+    currentLayer;
 
 
 //--------------------------------------//
@@ -107,8 +108,9 @@ function initContext(context) {
 }
 
 // 读取一个图层的色值
-export function onRun(context) {
+export default function onRun(context) {
     initContext(context);
+    console.log(context);
     var customColorValue = readColorValue(context, currentLayer);
     if (customColorValue) {
         doc.showMessage(customColorValue);
@@ -559,11 +561,11 @@ function openSetColorPanel(context, layer) {
     var frame = NSMakeRect(0, 30, 150, 30);
     for (var pool in colorPools) {
         var button = NSPopUpButton.alloc().initWithFrame(frame);
-        button.addButtonWithTitle(colorPoolNames[pool]);
+        button.addItemWithTitle(colorPoolNames[pool]);
 
         var colorArray = colorPools[pool];
         for (var index in colorArray) {
-            button.addButtonWithTitle(colorArray[index]);
+            button.addItemWithTitle(colorArray[index]);
         }
         
         view.addSubview(button);
@@ -641,11 +643,11 @@ function openSetColorPanelWithLayers(context, selection) {
     var frame = NSMakeRect(0, 30, 150, 30);
     for (var pool in colorPools) {
         var button = NSPopUpButton.alloc().initWithFrame(frame);
-        button.addButtonWithTitle(colorPoolNames[pool]);
+        button.addItemWithTitle(colorPoolNames[pool]);
 
         var colorArray = colorPools[pool];
         for (var index in colorArray) {
-            button.addButtonWithTitle(colorArray[index]);
+            button.addItemWithTitle(colorArray[index]);
         }
         
         view.addSubview(button);
@@ -736,6 +738,3 @@ function getOrignalLayerName(layer) {
 function saveOrignalLayerName(layer) {
     command.setValue_forKey_onLayer(getOrignalLayerName(layer), kLayerTBOrignalNameKey, layer);
 }
-
-initContext(context);
-setEachLayerName(currentLayer);
