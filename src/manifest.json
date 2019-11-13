@@ -3,35 +3,35 @@
   "icon": "icon.png",
   "commands": [
     {
-      "script" : "Script.js",
+      "script" : "./Script.js",
       "handler" : "setColorValueWithLayers",
       "shortcut" : "shift cmd i",
       "name" : "(UE)一键设置选中图层颜色",
       "identifier" : "com.tbcolorpool.createcolorvalueforlayers"
     },
     {
-      "script" : "Script.js",
+      "script" : "./Script.js",
       "handler" : "setColorValueWithCurrentLayer",
       "shortcut" : "shift cmd m",
       "name" : "(UE)手动设置选中图层颜色",
       "identifier" : "com.tbcolorpool.createcolorvalueforselectedlayer"
     },
     {
-      "script" : "Script.js",
+      "script" : "./Script.js",
       "handler" : "onRun",
       "shortcut" : "shift cmd p",
       "name" : "读取当前图层颜色",
       "identifier" : "com.tbcolorpool.readcolorvalue"
     },
     {
-      "script" : "Script.js",
+      "script" : "./Script.js",
       "handler" : "ungroupWithLayer",
       "shortcut" : "shift cmd ;",
       "name" : "一键解组图层",
       "identifier" : "com.tbcolorpool.ungroup"
     },
     {
-      "script" : "Script.js",
+      "script" : "./Script.js",
       "handler" : "restoreLayer",
       "shortcut" : "shift cmd '",
       "name" : "(UE)一键还原",
@@ -49,7 +49,7 @@
     "title" : "tb-colorpool"
   },
   "identifier" : "com.tbcolorpool.sketch",
-  "version" : "2.0.0",
+  "version" : "2.0.2",
   "description" : "增加UE自定义图层颜色功能",
   "authorEmail" : "yanshby@icloud.com",
   "name" : "tb-colorpool"
