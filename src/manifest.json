@@ -46,11 +46,11 @@
       "com.tbcolorpool.ungroup",
       "com.tbcolorpool.restorelayer"
     ],
-    "title" : "tb-colorpool"
+    "title" : "tieba-colorpool"
   },
   "identifier" : "com.tbcolorpool.sketch",
-  "version" : "2.0.7",
-  "description" : "v2.0.7测试插件更新",
+  "version" : "2.0.8",
+  "description" : "v2.0.8 更新色库，增加bgline色库对应语义文案",
   "authorEmail" : "yanshby@icloud.com",
-  "name" : "tb-colorpool"
+  "name" : "tieba-colorpool"
 }

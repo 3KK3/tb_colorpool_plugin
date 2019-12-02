@@ -21,7 +21,6 @@ var contColorDict = {
     };
 // 背景色库
 var bgLineColorDict = {
-    "#d4d4d4_1.00": "bgline_color_a",
     "#edeff0_1.00": "bgline_color_b",
     "#f7f9fa_1.00": "bgline_color_c",
     "#ffffff_1.00": "bgline_color_d",
@@ -40,39 +39,61 @@ var otherColorDict = {
     "#2bbcff_1.00": "linktip_color_b",
     "#00a2ff_1.00": "linktip_color_c",
     "#ffa32b_1.00": "linktip_color_d",
-    "#2470d4_1.00": "linktip_color_e",
+    "#2b87ff_1.00": "linktip_color_e",
     "#a32bff_1.00": "other_color_a",
     "#ff2b87_1.00": "other_color_b",
     "#24d45c_1.00": "other_color_c",
-    "#fff82b_1.00": "other_color_e",
     "#ffd82b_1.00": "other_color_f",
-    "#fffbeb_0.92": "other_color_g",
+    "#fffbeb_1.00": "other_color_g",
     };
 // 蒙层色库    
 var maskColorDict = {
+    "#000000_0.00": "mask_color_b0",
+    "#000000_0.16": "mask_color_b16",
+    "#000000_0.25": "mask_color_b25",
     "#000000_0.33": "mask_color_b33",
     "#000000_0.42": "mask_color_b42",
     "#000000_0.50": "mask_color_b50",
     "#000000_0.66": "mask_color_b66",
+    "#000000_0.83": "mask_color_b83",
+    /*"#000000_1.00": "mask_color_b100",*/
+    "#ffffff_0.00": "mask_color_c0",
+    "#ffffff_0.16": "mask_color_c16",
     "#ffffff_0.25": "mask_color_c25",
+    "#ffffff_0.33": "mask_color_c33",
+    "#ffffff_0.42": "mask_color_c42",
     "#ffffff_0.50": "mask_color_c50",
+    "#ffffff_0.66": "mask_color_c66",
     "#ffffff_0.83": "mask_color_c83",
+    /*"#ffffff_1.00": "mask_color_c100",*/
     
     };
 // 边框色库    
 var borderColorDict = {
-    "#000000_0.08": "border_color_a",
+    "#edeff0_1.00": "border_color_a",
     "#ffffff_1.00": "border_color_b",
     };
 
+// 阴影色库    
+var shadowColorDict = {
+    "#9fc0d4_0.00": "shadow_color_a0",
+    "#9fc0d4_0.08": "shadow_color_a0.08",
+    "#9fc0d4_0.16": "shadow_color_a0.16",
+    "#9fc0d4_0.25": "shadow_color_a0.25",
+    "#9fc0d4_0.33": "shadow_color_a0.33",
+    "#9fc0d4_0.42": "shadow_color_a0.42",
+    };
 
-var bgLineColors = [ "bgline_color_a","bgline_color_b","bgline_color_c","bgline_color_d","bgline_color_e",
-"bgline_color_f","bgline_color_g","bgline_color_h","bgline_color_i","bgline_color_j","bgline_color_k",]
+
+var bgLineColors = ["bgline_color_b, 细线分割线(全端分割线)","bgline_color_c, 组、面分割(此颜色慎用)","bgline_color_d, 产品底层背景色","bgline_color_e, 内容层及卡片背景",
+"bgline_color_f, 分享、发布模态层背景(如模态层上有白色图形时)","bgline_color_g, 内容层及卡片上子视图背景(楼中楼、分享贴底色)","bgline_color_h, 悬浮视图层背景(内容层加阴影的视图)","bgline_color_i, 模态层弹窗类上子视图背景","bgline_color_j, 输入类容器背景","bgline_color_k, 模态层弹窗类背景(筛选、更多)",]
 var otherColors = [ "cont_color_h", "linktip_color_a","linktip_color_b","linktip_color_c","linktip_color_d","linktip_color_e","other_color_a",
-"other_color_b","other_color_c","other_color_e","other_color_f","other_color_g"]
-var maskColors  = ["mask_color_b33","mask_color_b42","mask_color_b50","mask_color_b66","mask_color_c25","mask_color_c50","mask_color_c83",]
-var colorPools = [ bgLineColors, otherColors,maskColors];
-var colorPoolNames = ["背景色库", "强调色库", "蒙层色库"];
+"other_color_b","other_color_c","other_color_f","other_color_g"]
+var maskColors  = ["mask_color_b0","mask_color_b16","mask_color_b25","mask_color_b33","mask_color_b42","mask_color_b50","mask_color_b66","mask_color_b83","mask_color_c0","mask_color_c16","mask_color_c25","mask_color_c33","mask_color_c42","mask_color_c50","mask_color_c66","mask_color_c83",]
+var shadowColors = [ "shadow_color_a0","shadow_color_a0.08","shadow_color_a0.16","shadow_color_a0.25","shadow_color_a0.33",
+"shadow_color_a0.42",]
+var colorPools = [ bgLineColors, otherColors,maskColors,shadowColors];
+var colorPoolNames = ["背景色库", "强调色库", "蒙层色库", "阴影色库"];
 
 var kLayerTBColorCustomKey = "kLayerTBColorCustomKey";
 var kLayerTBOrignalNameKey = "kLayerTBOrignalNameKey";
@@ -407,7 +428,12 @@ var colorToKey = function (color) {
     var key = colorHex.color + "_" + colorHex.alpha;
 
     if (bgLineColorDict[key]) {
-      colorArray.push(bgLineColorDict[key]);
+      // 默认
+      if (key == "#ffffff_1.00") {
+        colorArray.push("bgline_color_e");
+      } else {
+        colorArray.push(bgLineColorDict[key]);
+      }
     }
 
     if (otherColorDict[key]) {
@@ -608,8 +634,9 @@ function openSetColorPanel(context, layer) {
         if (button.indexOfSelectedItem() == 0) {
             return;
         }
-        label.string = NSString.stringWithFormat("当前图层的颜色：%@",button.titleOfSelectedItem());
-        var value = button.titleOfSelectedItem();
+        var tempValue = button.titleOfSelectedItem().split(",")[0];
+        label.string = NSString.stringWithFormat("当前图层的颜色：%@",tempValue);
+        var value = tempValue;
         command.setValue_forKey_onLayer(value, kLayerTBColorCustomKey, currentLayer);
         // 将当前的layer的名称替换成颜色名。
         saveOrignalLayerName(currentLayer);
