@@ -1,0 +1,59 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "icon": "pic_logo.png",
+  "commands": [
+    {
+      "script": "__Script.js",
+      "handler": "setColorValueWithLayers",
+      "shortcut": "shift cmd i",
+      "name": "(UE)一键设置选中图层颜色",
+      "identifier": "com.tbcolorpool.createcolorvalueforlayers"
+    },
+    {
+      "script": "__Script.js",
+      "handler": "setColorValueWithCurrentLayer",
+      "shortcut": "shift cmd m",
+      "name": "(UE)手动设置选中图层颜色",
+      "identifier": "com.tbcolorpool.createcolorvalueforselectedlayer"
+    },
+    {
+      "script": "__Script.js",
+      "handler": "onRun",
+      "shortcut": "shift cmd p",
+      "name": "读取当前图层颜色",
+      "identifier": "com.tbcolorpool.readcolorvalue"
+    },
+    {
+      "script": "__Script.js",
+      "handler": "ungroupWithLayer",
+      "shortcut": "shift cmd ;",
+      "name": "一键解组图层",
+      "identifier": "com.tbcolorpool.ungroup"
+    },
+    {
+      "script": "__Script.js",
+      "handler": "restoreLayer",
+      "shortcut": "shift cmd '",
+      "name": "(UE)一键还原",
+      "identifier": "com.tbcolorpool.restorelayer"
+    }
+  ],
+  "menu": {
+    "items": [
+      "com.tbcolorpool.readcolorvalue",
+      "com.tbcolorpool.createcolorvalueforlayers",
+      "com.tbcolorpool.createcolorvalueforselectedlayer",
+      "com.tbcolorpool.ungroup",
+      "com.tbcolorpool.restorelayer"
+    ],
+    "title": "🎨Tieba-ColorPool"
+  },
+  "identifier": "com.tbcolorpool.sketch",
+  "version": "2.0.8",
+  "description": "v2.0.8 更新色库，增加bgline色库对应语义文案",
+  "authorEmail": "yanshby@icloud.com",
+  "name": "🎨Tieba-ColorPool",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com/YanShby/tb_colorpool_plugin/master/.appcast.xml",
+  "author": "Shen,Yan"
+}

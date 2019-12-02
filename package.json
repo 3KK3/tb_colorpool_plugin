@@ -1,12 +1,12 @@
 {
-  "name": "tieba-colorpool",
+  "name": "Tieba-ColorPool",
   "description": "This is read color pool name plugin only for tieba UE & RD",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "engines": {
     "sketch": ">=49.0"
   },
   "skpm": {
-    "name": "tieba-colorpool",
+    "name": "🎨Tieba-ColorPool",
     "manifest": "src/manifest.json",
     "main": "tieba-colorpool.sketchplugin",
     "assets": [

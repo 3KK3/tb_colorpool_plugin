@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
-  "icon": "icon.png",
+  "icon": "pic_logo.png",
   "commands": [
     {
       "script" : "./Script.js",
@@ -46,11 +46,11 @@
       "com.tbcolorpool.ungroup",
       "com.tbcolorpool.restorelayer"
     ],
-    "title" : "tieba-colorpool"
+    "title" : "🎨Tieba-ColorPool"
   },
   "identifier" : "com.tbcolorpool.sketch",
-  "version" : "2.0.8",
-  "description" : "v2.0.8 更新色库，增加bgline色库对应语义文案",
+  "version" : "2.0.9",
+  "description" : "v2.0.9 1.更新色库，增加bgline色库对应语义文案 2.增加插件logo",
   "authorEmail" : "yanshby@icloud.com",
-  "name" : "tieba-colorpool"
+  "name" : "🎨Tieba-ColorPool"
 }
