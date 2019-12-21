@@ -27,5 +27,8 @@
     "type": "git",
     "url": "git+https://github.com/YanShby/tb_colorpool_plugin"
   },
-  "author": "Shen,Yan <yanshby@icloud.com>"
+  "author": "Shen,Yan <yanshby@icloud.com>",
+  "dependencies": {
+    "skpm": "^1.3.1"
+  }
 }
