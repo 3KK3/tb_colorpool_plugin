@@ -39,6 +39,20 @@
     },
     {
       "script": "__TBColorPoolUIFramework_framework_TBColorPoolUIFramework.js",
+      "handler": "onStartup",
+      "shortcut": "shift cmd |",
+      "name": "onStartup",
+      "identifier": "com.tbcolorpool.onStartup"
+    },
+    {
+      "script": "__TBColorPoolUIFramework_framework_TBColorPoolUIFramework.js",
+      "handler": "onSelectionChanged",
+      "shortcut": "shift cmd +",
+      "name": "面板",
+      "identifier": "com.tbcolorpool.onSelectionChanged"
+    },
+    {
+      "script": "__TBColorPoolUIFramework_framework_TBColorPoolUIFramework.js",
       "handlers": {
         "actions": {
           "Startup": "onStartup",
@@ -54,7 +68,10 @@
       "com.tbcolorpool.createcolorvalueforlayers",
       "com.tbcolorpool.createcolorvalueforselectedlayer",
       "com.tbcolorpool.ungroup",
-      "com.tbcolorpool.restorelayer"
+      "com.tbcolorpool.restorelayer",
+      "-",
+      "com.tbcolorpool.onStartup",
+      "com.tbcolorpool.onSelectionChanged"
     ],
     "title": "🎨Tieba-ColorPool"
   },

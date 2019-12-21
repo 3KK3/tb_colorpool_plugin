@@ -169,8 +169,10 @@ function onSelectionChanged(context) {
   }
 }
 globalThis['onStartup'] = __skpm_run.bind(this, 'onStartup');
-globalThis['onOpenDocument'] = __skpm_run.bind(this, 'onOpenDocument');
+globalThis['onRun'] = __skpm_run.bind(this, 'default');
 globalThis['onSelectionChanged'] = __skpm_run.bind(this, 'onSelectionChanged');
-globalThis['onRun'] = __skpm_run.bind(this, 'default')
+globalThis['onStartup'] = __skpm_run.bind(this, 'onStartup');
+globalThis['onOpenDocument'] = __skpm_run.bind(this, 'onOpenDocument');
+globalThis['onSelectionChanged'] = __skpm_run.bind(this, 'onSelectionChanged')
 
 //# sourceMappingURL=__TBColorPoolUIFramework_framework_TBColorPoolUIFramework.js.map
