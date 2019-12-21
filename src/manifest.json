@@ -36,6 +36,16 @@
       "shortcut" : "shift cmd '",
       "name" : "(UE)一键还原",
       "identifier" : "com.tbcolorpool.restorelayer"
+    },
+    {
+      "script" : "./TBColorPoolUIFramework.framework/TBColorPoolUIFramework.js",
+      "handlers" : {
+        "actions" : {
+            "Startup" : "onStartup",
+            "OpenDocument":"onOpenDocument",
+            "SelectionChanged.finish" : "onSelectionChanged"
+        }
+      }
     }
   ],
   "menu": {
@@ -49,8 +59,8 @@
     "title" : "🎨Tieba-ColorPool"
   },
   "identifier" : "com.tbcolorpool.sketch",
-  "version" : "2.0.9",
-  "description" : "v2.0.9 1.更新色库，增加bgline色库对应语义文案 2.增加插件logo",
+  "version" : "2.1.0",
+  "description" : "v2.1.0 提交UIFramework",
   "authorEmail" : "yanshby@icloud.com",
   "name" : "🎨Tieba-ColorPool"
 }
