@@ -43,8 +43,8 @@
     "title": "🎨Tieba-ColorPool"
   },
   "identifier": "com.tbcolorpool.sketch",
-  "version": "2.1.4",
-  "description": "v2.1.4 色板及取色完成，取色基于色板， 为使用色板设置的颜色将会读取失败",
+  "version": "2.1.6",
+  "description": "v2.1.6 色板及取色完成，取色基于色板， 为使用色板设置的颜色将会读取失败；修复framework问题",
   "authorEmail": "yanshby@icloud.com",
   "name": "🎨Tieba-ColorPool",
   "disableCocoaScriptPreprocessor": true,
