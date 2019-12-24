@@ -1,7 +1,7 @@
 {
   "name": "Tieba-ColorPool",
   "description": "This is read color pool name plugin only for tieba UE & RD",
-  "version": "2.1.6",
+  "version": "2.1.5",
   "engines": {
     "sketch": ">=49.0"
   },
