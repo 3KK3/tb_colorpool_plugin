@@ -6,15 +6,23 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		9fubxAXIYaQ6cZFloxFuu3h9U7w=
+		dLM59KoLL7S2OVYhozRnc7pcvLM=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
 		PBf7zUDXCkm3b9QmG8XpH5cGN30=
 		</data>
+		<key>Resources/TBColorPoolColourPaletteItem.nib</key>
+		<data>
+		Drs3WqYxQ5qUSeX8Gq7Gn/dXhQs=
+		</data>
+		<key>Resources/TBColorPoolColourPaletteItemHeader.nib</key>
+		<data>
+		S9E/x3z41V4bMC6kOaJa5YIRVk0=
+		</data>
 		<key>Resources/TBColorPoolPanelView.nib</key>
 		<data>
-		kzEhxqzWnlFQsJUjyJ2wbGwnKJA=
+		ccNE0stblGPsAfZDr60ESSBowsA=
 		</data>
 		<key>Resources/TBColorPoolUIFramework.h</key>
 		<data>
@@ -22,19 +30,15 @@
 		</data>
 		<key>Resources/TBColorPoolUIFramework.js</key>
 		<data>
-		Qw7hviRbL3DCSc3USkqMvEdYHJo=
+		RUumh0LSEN5qTSAT5HaLJVuFHSg=
 		</data>
-		<key>Resources/TBColorPoolUIFrameworkSketchPanelCellDefault.nib</key>
+		<key>Resources/close.png</key>
 		<data>
-		GYytTHyqhxMrv/CrbijRketvs48=
+		K7UcJr0/FovjfMAZCztOdu2y8+A=
 		</data>
-		<key>Resources/TBColorPoolUIFrameworkSketchPanelCellHeader.nib</key>
+		<key>Resources/color.plist</key>
 		<data>
-		q0gSwpeVtC1GPtEv1L6b6VwqTPQ=
-		</data>
-		<key>Resources/icon.png</key>
-		<data>
-		28lppr8NYRXZzKzcH5l0+lAhRPo=
+		pYw2jjjjzae1oDZtdE5eCkW9rgs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -71,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oVppyyE0iOsDFGYa0cbBD01SHspc4stOtx54yg4p8P4=
+			pgLSvtpXGB4snMP+a9t4LQ3uI8v7wJBdJyd/m0zlOqg=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
@@ -81,11 +85,25 @@
 			J5zi+npNVm57VbM3ONocKC1oJYqrOxLrnuB93LTmmjk=
 			</data>
 		</dict>
+		<key>Resources/TBColorPoolColourPaletteItem.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/J1PpfCDYmTpArtuGwWWPQxyJt1CbjUsX58pHh2ORJA=
+			</data>
+		</dict>
+		<key>Resources/TBColorPoolColourPaletteItemHeader.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+ru25WIqIeK5rsRORXipQW+C7sk+6OXqTf+iT3FnQMs=
+			</data>
+		</dict>
 		<key>Resources/TBColorPoolPanelView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LD1bzANzBtrRqVc9A/Pi+Q3V/0UlpGKQ6NU4PAa30Sw=
+			76VY3X9F/Adw0dq20fUi0rKJATLE5nIQJI5xu+rU7jU=
 			</data>
 		</dict>
 		<key>Resources/TBColorPoolUIFramework.h</key>
@@ -99,28 +117,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			D+hz0gSeLmw73ccHKs6HljetAvPRADETz0HN52TwiWk=
+			i2JHnUByeWkFMfu9LZopCy3ypds/ZxaWjahpK9OGGXM=
 			</data>
 		</dict>
-		<key>Resources/TBColorPoolUIFrameworkSketchPanelCellDefault.nib</key>
+		<key>Resources/close.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CrAGHXAXWIZbayKcDRxX+TgHjdU4WPXejDng/YJbMuA=
+			l/nfvzEWfmtbtngeptJgbjNVlCVz1VE7JeqS8HAIuPo=
 			</data>
 		</dict>
-		<key>Resources/TBColorPoolUIFrameworkSketchPanelCellHeader.nib</key>
+		<key>Resources/color.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tm5ZMfI2j6josASCLET+QtuYhzz8csmL54a5x1nISlI=
-			</data>
-		</dict>
-		<key>Resources/icon.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			g6wTt2lstSMC52upnGbyfXjVeYHKaSjUYmar6tpuHug=
+			rq+vSxUQRXU8qpGbOZ/WIPGQmAIbvRaZGN7Kkibr/nY=
 			</data>
 		</dict>
 	</dict>

@@ -97,31 +97,14 @@ var exports =
 /*!************************************************************************!*\
   !*** ./src/TBColorPoolUIFramework.framework/TBColorPoolUIFramework.js ***!
   \************************************************************************/
-/*! exports provided: onStartup, onSelectionChanged */
+/*! exports provided: onStartup, showPanel, readColor */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onStartup", function() { return onStartup; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSelectionChanged", function() { return onSelectionChanged; });
-/*
-// To load this framework, add the following code in your manifest.json
-
-"commands": [
-:
-:
-{
-    "script" : "TBColorPoolUIFramework.framework/TBColorPoolUIFramework.js",
-    "handlers" : {
-        "actions" : {
-            "Startup" : "onStartup",
-            "OpenDocument":"onOpenDocument",
-            "SelectionChanged.finish" : "onSelectionChanged"
-        }
-    }
-}
-]
-*/
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showPanel", function() { return showPanel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "readColor", function() { return readColor; });
 function onStartup(context) {
   var TBColorPoolUIFramework_FrameworkPath = TBColorPoolUIFramework_FrameworkPath || COScript.currentCOScript().env().scriptURL.path().stringByDeletingLastPathComponent().stringByDeletingLastPathComponent();
   var TBColorPoolUIFramework_Log = TBColorPoolUIFramework_Log || log;
@@ -145,8 +128,12 @@ function onStartup(context) {
   })();
 }
 ;
-function onSelectionChanged(context) {
-  TBColorPoolUIFramework.onSelectionChanged(context);
+function showPanel(context) {
+  TBColorPoolUIFramework.showPanel(context);
+}
+;
+function readColor(context) {
+  TBColorPoolUIFramework.readColor(context);
 }
 ;
 
@@ -170,9 +157,8 @@ function onSelectionChanged(context) {
 }
 globalThis['onStartup'] = __skpm_run.bind(this, 'onStartup');
 globalThis['onRun'] = __skpm_run.bind(this, 'default');
-globalThis['onSelectionChanged'] = __skpm_run.bind(this, 'onSelectionChanged');
+globalThis['showPanel'] = __skpm_run.bind(this, 'showPanel');
 globalThis['onStartup'] = __skpm_run.bind(this, 'onStartup');
-globalThis['onOpenDocument'] = __skpm_run.bind(this, 'onOpenDocument');
-globalThis['onSelectionChanged'] = __skpm_run.bind(this, 'onSelectionChanged')
+globalThis['readColor'] = __skpm_run.bind(this, 'readColor')
 
 //# sourceMappingURL=__TBColorPoolUIFramework_framework_TBColorPoolUIFramework.js.map
