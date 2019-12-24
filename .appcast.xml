@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
+     <item>
+      <enclosure url="http://github.com/YanShby/tb_colorpool_plugin/releases/tag/v2.1.8/TBColorPool.sketchplugin.zip" sparkle:version="2.1.8"/>
+    </item>
     <item>
       <enclosure url="https://github.com/YanShby/tb_colorpool_plugin/releases/download/v2.1.6/tieba-colorpool.sketchplugin.zip" sparkle:version="2.1.6"/>
     </item>
