@@ -75,8 +75,8 @@
     "title": "🎨Tieba-ColorPool"
   },
   "identifier": "com.tbcolorpool.sketch",
-  "version": "2.1.2",
-  "description": "v2.1.2 提交UIFramework",
+  "version": "2.1.3",
+  "description": "v2.1.3 色板及取色完成，取色基于色板， 为使用色板设置的颜色将会读取失败",
   "authorEmail": "yanshby@icloud.com",
   "name": "🎨Tieba-ColorPool",
   "disableCocoaScriptPreprocessor": true,
