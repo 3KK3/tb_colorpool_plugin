@@ -6,11 +6,11 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		dLM59KoLL7S2OVYhozRnc7pcvLM=
+		GBRayOzrMcDJmuECn2YeSvVmsC8=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		PBf7zUDXCkm3b9QmG8XpH5cGN30=
+		MKwJzqSAUs1OUcgVikBQrfk0Obo=
 		</data>
 		<key>Resources/TBColorPoolColourPaletteItem.nib</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Resources/TBColorPoolColourPaletteItemHeader.nib</key>
 		<data>
-		S9E/x3z41V4bMC6kOaJa5YIRVk0=
+		6bBbijayhyySrqMgheLgYHZ0MDI=
 		</data>
 		<key>Resources/TBColorPoolPanelView.nib</key>
 		<data>
-		ccNE0stblGPsAfZDr60ESSBowsA=
+		pR9PuKBGnN73U6Jj6lpPOBYLgWg=
 		</data>
 		<key>Resources/TBColorPoolUIFramework.h</key>
 		<data>
@@ -54,14 +54,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XV/Up+iE8GK3WDGhxNjjGAH5fABhLnKCKa9vEubCIxs=
+			UnuWW+8blWwtdd+fXb5mCUxctUebqhqEazEoMsom/cA=
 			</data>
 		</dict>
 		<key>Modules/TBColorPoolUIFramework.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nlLv6XWOXtj3+Dn6zp+Cqk4IsFbOESaHxkYmlgQgJXw=
+			AKEKI8hXE2womdJ2DEccn0xtdJcZbEcjaSd/QDZWlrY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -75,14 +75,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pgLSvtpXGB4snMP+a9t4LQ3uI8v7wJBdJyd/m0zlOqg=
+			NAoROo9UCHf457ACkllHz/UNZEyYQS4pVQBJxMMLITU=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J5zi+npNVm57VbM3ONocKC1oJYqrOxLrnuB93LTmmjk=
+			+n37jxGHvlQXqt8KSAo4NhMUf/sPoqDaCCiEgF84pQw=
 			</data>
 		</dict>
 		<key>Resources/TBColorPoolColourPaletteItem.nib</key>
@@ -96,14 +96,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+ru25WIqIeK5rsRORXipQW+C7sk+6OXqTf+iT3FnQMs=
+			tF1dSnHzkZKmTp0HVe/UiBGBCuF1PNoHq8vmIIQObD8=
 			</data>
 		</dict>
 		<key>Resources/TBColorPoolPanelView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			76VY3X9F/Adw0dq20fUi0rKJATLE5nIQJI5xu+rU7jU=
+			yA08l3eOpdmBhvPnILogpSZV1bf3wZDyMd0LxTFbPbA=
 			</data>
 		</dict>
 		<key>Resources/TBColorPoolUIFramework.h</key>

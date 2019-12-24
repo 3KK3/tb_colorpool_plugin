@@ -1,6 +1,26 @@
-export function onStartup(context) {
+/*
+// To load this framework, add the following code in your manifest.json
+
+"commands": [
+:
+:
+{
+    "script" : "TBColorPoolUIFramework.framework/TBColorPoolUIFramework.js",
+    "handlers" : {
+        "actions" : {
+            "Startup" : "onStartup",
+            "OpenDocument":"onOpenDocument",
+            "SelectionChanged.finish" : "onSelectionChanged"
+        }
+    }
+}
+]
+*/
+
+var onStartup = function(context) {
   var TBColorPoolUIFramework_FrameworkPath = TBColorPoolUIFramework_FrameworkPath || COScript.currentCOScript().env().scriptURL.path().stringByDeletingLastPathComponent().stringByDeletingLastPathComponent();
   var TBColorPoolUIFramework_Log = TBColorPoolUIFramework_Log || log;
+  TBColorPoolUIFramework_Log("framework 路径:" + TBColorPoolUIFramework_FrameworkPath);
   (function() {
     var mocha = Mocha.sharedRuntime();
     var frameworkName = "TBColorPoolUIFramework";
@@ -8,7 +28,7 @@ export function onStartup(context) {
     if (mocha.valueForKey(frameworkName)) {
       TBColorPoolUIFramework_Log("😎 loadFramework: `" + frameworkName + "` already loaded.");
       return true;
- 
+      
     } else if (mocha.loadFrameworkWithName_inDirectory(frameworkName, directory)) {
       TBColorPoolUIFramework_Log("✅ loadFramework: `" + frameworkName + "` success!");
       mocha.setValue_forKey_(true, frameworkName);
@@ -18,10 +38,39 @@ export function onStartup(context) {
       return false;
     }
   })();
- };
- export function showPanel(context) {
+};
+
+var showPanel = function(context) {
   TBColorPoolUIFramework.showPanel(context);
- };
- export function readColor(context) {
-   TBColorPoolUIFramework.readColor(context);
-  };
+}
+
+var readColor = function(context) {
+  TBColorPoolUIFramework.readColor(context);
+}
+
+//
+//
+//export function onStartup(context) {
+//  var TBColorPoolUIFramework_FrameworkPath = TBColorPoolUIFramework_FrameworkPath || COScript.currentCOScript().env().scriptURL.path().stringByDeletingLastPathComponent().stringByDeletingLastPathComponent();
+//  var TBColorPoolUIFramework_Log = TBColorPoolUIFramework_Log || log;
+//  (function() {
+//    var mocha = Mocha.sharedRuntime();
+//    var frameworkName = "TBColorPoolUIFramework";
+//    var directory = TBColorPoolUIFramework_FrameworkPath;
+//    if (mocha.valueForKey(frameworkName)) {
+//      TBColorPoolUIFramework_Log("😎 loadFramework: `" + frameworkName + "` already loaded.");
+//      return true;
+//
+//    } else if (mocha.loadFrameworkWithName_inDirectory(frameworkName, directory)) {
+//      TBColorPoolUIFramework_Log("✅ loadFramework: `" + frameworkName + "` success!");
+//      mocha.setValue_forKey_(true, frameworkName);
+//      return true;
+//    } else {
+//      TBColorPoolUIFramework_Log("❌ loadFramework: `" + frameworkName + "` failed!: " + directory + ". Please define TBColorPoolUIFramework_FrameworkPath if you're trying to @import in a custom plugin");
+//      return false;
+//    }
+//  })();
+//};
+//export function onSelectionChanged(context) {
+//  TBColorPoolUIFramework.onSelectionChanged(context);
+//};

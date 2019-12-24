@@ -39,7 +39,7 @@
 	<key>DTXcodeBuild</key>
 	<string>11C29</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.15</string>
+	<string>10.13</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 Ewane. All rights reserved.</string>
 </dict>
