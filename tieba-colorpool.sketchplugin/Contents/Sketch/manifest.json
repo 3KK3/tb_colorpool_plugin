@@ -4,31 +4,10 @@
   "commands": [
     {
       "script": "__Script.js",
-      "handler": "setColorValueWithLayers",
-      "shortcut": "shift cmd i",
-      "name": "(UE)一键设置选中图层颜色",
-      "identifier": "com.tbcolorpool.createcolorvalueforlayers"
-    },
-    {
-      "script": "__Script.js",
-      "handler": "setColorValueWithCurrentLayer",
-      "shortcut": "shift cmd m",
-      "name": "(UE)手动设置选中图层颜色",
-      "identifier": "com.tbcolorpool.createcolorvalueforselectedlayer"
-    },
-    {
-      "script": "__Script.js",
       "handler": "onRun",
       "shortcut": "shift cmd p",
       "name": "读取当前图层颜色",
       "identifier": "com.tbcolorpool.readcolorvalue"
-    },
-    {
-      "script": "__Script.js",
-      "handler": "ungroupWithLayer",
-      "shortcut": "shift cmd ;",
-      "name": "一键解组图层",
-      "identifier": "com.tbcolorpool.ungroup"
     },
     {
       "script": "__Script.js",
@@ -39,16 +18,9 @@
     },
     {
       "script": "__TBColorPoolUIFramework_framework_TBColorPoolUIFramework.js",
-      "handler": "onStartup",
-      "shortcut": "shift cmd |",
-      "name": "onStartup",
-      "identifier": "com.tbcolorpool.onStartup"
-    },
-    {
-      "script": "__TBColorPoolUIFramework_framework_TBColorPoolUIFramework.js",
       "handler": "showPanel",
       "shortcut": "shift cmd +",
-      "name": "面板",
+      "name": "开启面板",
       "identifier": "com.tbcolorpool.showPanel"
     },
     {
@@ -63,20 +35,16 @@
   ],
   "menu": {
     "items": [
-      "com.tbcolorpool.readcolorvalue",
-      "com.tbcolorpool.createcolorvalueforlayers",
-      "com.tbcolorpool.createcolorvalueforselectedlayer",
-      "com.tbcolorpool.ungroup",
-      "com.tbcolorpool.restorelayer",
+      "com.tbcolorpool.showPanel",
       "-",
-      "com.tbcolorpool.onStartup",
-      "com.tbcolorpool.showPanel"
+      "com.tbcolorpool.readcolorvalue",
+      "com.tbcolorpool.restorelayer"
     ],
     "title": "🎨Tieba-ColorPool"
   },
   "identifier": "com.tbcolorpool.sketch",
-  "version": "2.1.3",
-  "description": "v2.1.3 色板及取色完成，取色基于色板， 为使用色板设置的颜色将会读取失败",
+  "version": "2.1.3.1",
+  "description": "v2.1.3.1 色板及取色完成，取色基于色板， 为使用色板设置的颜色将会读取失败",
   "authorEmail": "yanshby@icloud.com",
   "name": "🎨Tieba-ColorPool",
   "disableCocoaScriptPreprocessor": true,

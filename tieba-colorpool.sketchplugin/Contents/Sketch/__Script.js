@@ -930,11 +930,7 @@ module.exports = require("sketch");
     }
   }
 }
-globalThis['setColorValueWithLayers'] = __skpm_run.bind(this, 'setColorValueWithLayers');
 globalThis['onRun'] = __skpm_run.bind(this, 'default');
-globalThis['setColorValueWithCurrentLayer'] = __skpm_run.bind(this, 'setColorValueWithCurrentLayer');
-globalThis['onRun'] = __skpm_run.bind(this, 'default');
-globalThis['ungroupWithLayer'] = __skpm_run.bind(this, 'ungroupWithLayer');
 globalThis['restoreLayer'] = __skpm_run.bind(this, 'restoreLayer')
 
 //# sourceMappingURL=__Script.js.map

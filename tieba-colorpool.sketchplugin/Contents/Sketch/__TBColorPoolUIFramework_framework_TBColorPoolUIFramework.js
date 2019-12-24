@@ -155,9 +155,8 @@ function readColor(context) {
     }
   }
 }
-globalThis['onStartup'] = __skpm_run.bind(this, 'onStartup');
-globalThis['onRun'] = __skpm_run.bind(this, 'default');
 globalThis['showPanel'] = __skpm_run.bind(this, 'showPanel');
+globalThis['onRun'] = __skpm_run.bind(this, 'default');
 globalThis['onStartup'] = __skpm_run.bind(this, 'onStartup');
 globalThis['readColor'] = __skpm_run.bind(this, 'readColor')
 
