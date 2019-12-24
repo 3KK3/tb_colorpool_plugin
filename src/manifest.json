@@ -15,7 +15,7 @@
       "shortcut" : "shift cmd '",
       "name" : "(UE)一键还原",
       "identifier" : "com.tbcolorpool.restorelayer"
-    }
+    },
     {
       "script" : "./TBColorPoolUIFramework.framework/TBColorPoolUIFramework.js",
       "handler" : "showPanel",
