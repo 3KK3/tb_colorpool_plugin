@@ -1,4 +1,0 @@
-framework module TBColorPoolUIFramework {
-    header "TBColorPoolUIFramework-Swift.h"
-    requires objc
-}
